@@ -1,4 +1,4 @@
-defmodule AutoDealApiWeb.Api.CarController do
+defmodule AutoDealApiWeb.Api.V1.CarController do
   use AutoDealApiWeb, :controller
 
   def get(conn, params) do
@@ -6,10 +6,7 @@ defmodule AutoDealApiWeb.Api.CarController do
     conn
     |> put_status(200)
     |> render("result.json",
-      result: %{
-        status: 200
-      }
-
+      result: %{status: 200}
     )
   end
 end
