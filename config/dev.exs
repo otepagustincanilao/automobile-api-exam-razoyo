@@ -73,3 +73,6 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+config :auto_deal_api,
+  auth_token: "c0fc03503db33b21ca97965f5835bcdca33442d5b40b819cf6ce04742e476fb8"

@@ -2,13 +2,18 @@ defmodule AutoDealApiWeb.Api.V1.CarController do
   use AutoDealApiWeb, :controller
 
   alias AutoDealApi.Contexts.Car, as: ContextCar
+  alias AutoDealApiWeb.Api.V1.ErrorView
+
+  action_fallback AutoDealApiWeb.Api.V1.FallbackController
 
   def get_all(conn, params) do
+    token = Application.get_env(:auto_deal_api, :auth_token)
+
     with %{valid?: true, changes: params} <- ContextCar.validate_params(params, :list),
          cars_and_count <- ContextCar.list_cars(params) do
       conn
       |> put_status(200)
-      |> put_resp_header("Authorization", "123xxxxxxx")
+      |> put_resp_header("Authorization", token)
       |> render("cars.json", result: cars_and_count)
     else
       %{valid?: false} = changeset ->
@@ -21,7 +26,8 @@ defmodule AutoDealApiWeb.Api.V1.CarController do
 
         conn
         |> put_status(400)
-        |> render("errors.json", errors: errors)
+        |> put_view(ErrorView)
+        |> render("bad_request.json", errors: errors)
     end
   end
 

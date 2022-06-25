@@ -90,6 +90,7 @@ defmodule AutoDealApi.Contexts.Car do
     query
     |> where([c], ilike(c.make, ^"%#{search_value}%"))
   end
+
   ##################################### End of list cars #########################################
 
   defp validate_car_id(%{changes: %{id: id}} = changeset) do
@@ -102,5 +103,4 @@ defmodule AutoDealApi.Contexts.Car do
         |> Changeset.add_error(:id, "UUID is invalid")
     end
   end
-
 end
