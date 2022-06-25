@@ -12,10 +12,16 @@ config :auto_deal_api,
 
 # Configures the endpoint
 config :auto_deal_api, AutoDealApiWeb.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "josephcanilao.com"],
   render_errors: [view: AutoDealApiWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: AutoDealApi.PubSub,
-  live_view: [signing_salt: "kxjlFk1s"]
+  live_view: [signing_salt: "kxjlFk1s"],
+  https: [
+    port: 4001,
+    cipher_suite: :strong,
+    certfile: "priv/cert/selfsigned.pem",
+    keyfile: "priv/cert/selfsigned_key.pem"
+  ]
 
 # Configures the mailer
 #

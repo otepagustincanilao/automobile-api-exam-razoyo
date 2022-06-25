@@ -21,9 +21,11 @@ defmodule AutoDealApiWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", AutoDealApiWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", AutoDealApiWeb.Api, as: :api do
+    pipe_through :api
+
+    get "/cars", CarController, :get
+  end
 
   # Enables LiveDashboard only for development
   #
