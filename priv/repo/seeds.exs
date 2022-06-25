@@ -13,7 +13,7 @@ cars = [
     miles_per_gallon: 30,
     transmission: "Manual",
     fuel_type: "Gas",
-    price: 1700000.50,
+    price: 1_700_000.50,
     currency: "PHP"
   },
   %{
@@ -27,7 +27,7 @@ cars = [
     miles_per_gallon: 31,
     transmission: "Manual",
     fuel_type: "Gas",
-    price: 850000.50,
+    price: 850_000.50,
     currency: "PHP"
   },
   %{
@@ -41,7 +41,7 @@ cars = [
     miles_per_gallon: 35,
     transmission: "Automatic",
     fuel_type: "Diesel",
-    price: 2450000.50,
+    price: 2_450_000.50,
     currency: "PHP"
   },
   %{
@@ -55,7 +55,7 @@ cars = [
     miles_per_gallon: 33,
     transmission: "Automatic",
     fuel_type: "Gas",
-    price: 2370000,
+    price: 2_370_000,
     currency: "PHP"
   },
   %{
@@ -69,7 +69,7 @@ cars = [
     miles_per_gallon: 29,
     transmission: "Automatic",
     fuel_type: "Gas",
-    price: 1100000,
+    price: 1_100_000,
     currency: "PHP"
   },
   %{
@@ -83,7 +83,7 @@ cars = [
     miles_per_gallon: 31,
     transmission: "Automatic",
     fuel_type: "Gas",
-    price: 1350000,
+    price: 1_350_000,
     currency: "PHP"
   },
   %{
@@ -97,7 +97,7 @@ cars = [
     miles_per_gallon: 40,
     transmission: "Automatic",
     fuel_type: "Diesel",
-    price: 1600000,
+    price: 1_600_000,
     currency: "PHP"
   },
   %{
@@ -111,7 +111,7 @@ cars = [
     miles_per_gallon: 38,
     transmission: "Automatic",
     fuel_type: "Gas",
-    price: 1200000,
+    price: 1_200_000,
     currency: "PHP"
   },
   %{
@@ -125,7 +125,7 @@ cars = [
     miles_per_gallon: 42,
     transmission: "Manual",
     fuel_type: "Gas",
-    price: 10500000,
+    price: 10_500_000,
     currency: "PHP"
   },
   %{
@@ -139,11 +139,10 @@ cars = [
     miles_per_gallon: 46,
     transmission: "Manual",
     fuel_type: "Gas",
-    price: 15500000,
+    price: 15_500_000,
     currency: "PHP"
   }
 ]
-
 
 cars
 |> Enum.map(&CarCotext.create/1)

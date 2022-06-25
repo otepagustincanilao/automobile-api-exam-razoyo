@@ -12,6 +12,7 @@ defmodule AutoDealApiWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    #plug(AutoDealApiWeb.Plug.Auth)
   end
 
   scope "/", AutoDealApiWeb do
@@ -25,7 +26,8 @@ defmodule AutoDealApiWeb.Router do
     pipe_through :api
 
     scope "/v1", V1, as: :v1 do
-      get "/cars", CarController, :get
+      get "/cars", CarController, :get_all
+      get "/cars/:id", CarController, :view
     end
   end
 

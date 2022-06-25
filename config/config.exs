@@ -12,7 +12,7 @@ config :auto_deal_api,
 
 # Configures the endpoint
 config :auto_deal_api, AutoDealApiWeb.Endpoint,
-  url: [host: "josephcanilao.com"],
+  url: [host: "localhost"],
   render_errors: [view: AutoDealApiWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: AutoDealApi.PubSub,
   live_view: [signing_salt: "kxjlFk1s"],

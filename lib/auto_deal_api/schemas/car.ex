@@ -4,6 +4,10 @@ defmodule AutoDealApi.Schemas.Car do
   """
   use AutoDealApi.Schema
 
+  @required ~w(make model transmission year)a
+  @optional ~w(slug seat_capacity color miles_per_gallon price currency fuel_type series)a
+
+  @derive {Jason.Encoder, only: @required ++ @optional}
   schema "cars" do
     field :make, :string
     field :model, :string
@@ -18,12 +22,8 @@ defmodule AutoDealApi.Schemas.Car do
     field :price, :decimal
     field :currency, :string
 
-
     timestamps()
   end
-
-  @required ~w(make model transmission year)a
-  @optional ~w(slug seat_capacity color miles_per_gallon price currency fuel_type series)a
 
   @doc false
   def changeset(car, attrs) do
