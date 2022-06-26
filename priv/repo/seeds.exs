@@ -15,7 +15,8 @@ cars = [
     fuel_type: "Gas",
     price: 1_700_000.50,
     currency: "PHP",
-    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/11/2760/honda-civic-2021-front-angle-low-view-575715.jpg"
+    img_url:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/11/2760/honda-civic-2021-front-angle-low-view-575715.jpg"
   },
   %{
     make: "TOYOTA",
@@ -30,7 +31,8 @@ cars = [
     fuel_type: "Gas",
     price: 850_000.50,
     currency: "PHP",
-    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/30/1943/toyota-vios-front-side-view-409037.jpg"
+    img_url:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/30/1943/toyota-vios-front-side-view-409037.jpg"
   },
   %{
     make: "TOYOTA",
@@ -45,7 +47,8 @@ cars = [
     fuel_type: "Diesel",
     price: 2_450_000.50,
     currency: "PHP",
-    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/30/1110/toyota-fortuner-front-angle-low-view-275442.jpg"
+    img_url:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/30/1110/toyota-fortuner-front-angle-low-view-275442.jpg"
   },
   %{
     make: "TOYOTA",
@@ -60,7 +63,8 @@ cars = [
     fuel_type: "Gas",
     price: 2_370_000,
     currency: "PHP",
-    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/30/2014/toyota-camry-front-angle-low-view-860620.jpg"
+    img_url:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/30/2014/toyota-camry-front-angle-low-view-860620.jpg"
   },
   %{
     make: "HONDA",
@@ -75,7 +79,8 @@ cars = [
     fuel_type: "Gas",
     price: 1_100_000,
     currency: "PHP",
-    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/11/2108/honda-accord-front-angle-low-view-235371.jpg"
+    img_url:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/11/2108/honda-accord-front-angle-low-view-235371.jpg"
   },
   %{
     make: "MAZDA",
@@ -90,7 +95,8 @@ cars = [
     fuel_type: "Gas",
     price: 1_350_000,
     currency: "PHP",
-    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/21/499/mazda-3-sedan-front-side-view-847321.jpg"
+    img_url:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/21/499/mazda-3-sedan-front-side-view-847321.jpg"
   },
   %{
     make: "MITSUBISHI",
@@ -105,7 +111,8 @@ cars = [
     fuel_type: "Diesel",
     price: 1_600_000,
     currency: "PHP",
-    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/24/1643/mitsubishi-montero-sport-front-angle-low-view-475965.jpg"
+    img_url:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/24/1643/mitsubishi-montero-sport-front-angle-low-view-475965.jpg"
   },
   %{
     make: "MITSUBISHI",
@@ -120,7 +127,8 @@ cars = [
     fuel_type: "Gas",
     price: 1_200_000,
     currency: "PHP",
-    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/24/2953/mitsubishi-xpander-2022-front-side-view-243429.jpg"
+    img_url:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/24/2953/mitsubishi-xpander-2022-front-side-view-243429.jpg"
   },
   %{
     make: "LAMBORGHINI",
@@ -135,7 +143,8 @@ cars = [
     fuel_type: "Gas",
     price: 15_500_000,
     currency: "PHP",
-    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/51/478/lamborghini-huracan-front-angle-low-view-663613.jpg"
+    img_url:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/51/478/lamborghini-huracan-front-angle-low-view-663613.jpg"
   },
   %{
     make: "LAMBORGHINI",
@@ -150,7 +159,8 @@ cars = [
     fuel_type: "Gas",
     price: 25_500_000,
     currency: "PHP",
-    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/51/2018/lamborghini-aventador-front-angle-low-view-196746.jpg"
+    img_url:
+      "https://imgcdn.zigwheels.ph/large/gallery/exterior/51/2018/lamborghini-aventador-front-angle-low-view-196746.jpg"
   }
 ]
 

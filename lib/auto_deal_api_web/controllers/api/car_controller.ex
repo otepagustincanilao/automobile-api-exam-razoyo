@@ -17,12 +17,7 @@ defmodule AutoDealApiWeb.Api.V1.CarController do
       |> render("cars.json", result: cars_and_count)
     else
       %{valid?: false} = changeset ->
-        errors =
-          Ecto.Changeset.traverse_errors(changeset, fn {msg, opts} ->
-            Enum.reduce(opts, msg, fn {key, value}, acc ->
-              String.replace(acc, "%{#{key}}", to_string(value))
-            end)
-          end)
+        errors = compile_changeset_errors(changeset)
 
         conn
         |> put_status(400)
@@ -39,17 +34,20 @@ defmodule AutoDealApiWeb.Api.V1.CarController do
       |> render("car.json", result: car)
     else
       %{valid?: false} = changeset ->
-        errors =
-          Ecto.Changeset.traverse_errors(changeset, fn {msg, opts} ->
-            Enum.reduce(opts, msg, fn {key, value}, acc ->
-              String.replace(acc, "%{#{key}}", to_string(value))
-            end)
-          end)
+        errors = compile_changeset_errors(changeset)
 
         conn
         |> put_status(400)
-        |> render("errors.json", errors: errors)
+        |> put_view(ErrorView)
+        |> render("bad_request.json", errors: errors)
     end
   end
 
+  defp compile_changeset_errors(changeset) do
+    Ecto.Changeset.traverse_errors(changeset, fn {msg, opts} ->
+      Enum.reduce(opts, msg, fn {key, value}, acc ->
+        String.replace(acc, "%{#{key}}", to_string(value))
+      end)
+    end)
+  end
 end

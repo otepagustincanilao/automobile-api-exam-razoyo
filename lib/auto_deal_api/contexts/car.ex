@@ -4,13 +4,13 @@ defmodule AutoDealApi.Contexts.Car do
   alias AutoDealApi.Schemas.Car
   alias Ecto.Changeset
 
-  @spec get(String.t()) :: %Car{}
+  @spec get(String.t()) :: %Car{} | nil
   def get(id) do
     Car
     |> Repo.get(id)
   end
 
-  @spec get_by(map()) :: %Car{}
+  @spec get_by(map()) :: %Car{} | nil
   def get_by(params) do
     Car
     |> Repo.get_by(params)
@@ -23,14 +23,14 @@ defmodule AutoDealApi.Contexts.Car do
     |> Repo.insert()
   end
 
-  @spec get_car_by_brand(String.t()) :: %Car{}
+  @spec get_car_by_brand(String.t()) :: %Car{} | nil
   def get_car_by_brand(brand) do
     Car
     |> where([c], c.brand == ^brand)
     |> Repo.one()
   end
 
-  @spec get_car_by_make(String.t()) :: %Car{}
+  @spec get_car_by_make(String.t()) :: %Car{} | nil
   def get_car_by_make(make) do
     Car
     |> where([c], c.make == ^make)
@@ -59,6 +59,7 @@ defmodule AutoDealApi.Contexts.Car do
 
     {%{}, data_types}
     |> Changeset.cast(params, Map.keys(data_types))
+    |> validate_uuid()
     |> validate_car_id()
   end
 
@@ -93,7 +94,7 @@ defmodule AutoDealApi.Contexts.Car do
 
   ##################################### End of list cars #########################################
 
-  defp validate_car_id(%{changes: %{id: id}} = changeset) do
+  defp validate_uuid(%{changes: %{id: id}} = changeset) do
     case Ecto.UUID.cast(id) do
       {:ok, _uuid} ->
         changeset
@@ -101,6 +102,17 @@ defmodule AutoDealApi.Contexts.Car do
       _ ->
         changeset
         |> Changeset.add_error(:id, "UUID is invalid")
+    end
+  end
+
+  defp validate_car_id(%{valid?: true, changes: %{id: id}} = changeset) do
+    case get(id) do
+      %Car{} ->
+        changeset
+
+      _ ->
+        changeset
+        |> Changeset.add_error(:id, "Car Doesn't exist!")
     end
   end
 end
