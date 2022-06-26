@@ -1,4 +1,4 @@
-# AutoDealApi
+# AutoDealApi (AKA Automobile API)
 
 To start your Phoenix server:
 
