@@ -16,6 +16,7 @@ defmodule AutoDealApi.Repo.Migrations.CreateCars do
       add :fuel_type, :string
       add :price, :decimal
       add :currency, :string
+      add :img_url, :string
 
       timestamps()
     end

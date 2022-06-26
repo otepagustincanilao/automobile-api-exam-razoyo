@@ -14,7 +14,8 @@ cars = [
     transmission: "Manual",
     fuel_type: "Gas",
     price: 1_700_000.50,
-    currency: "PHP"
+    currency: "PHP",
+    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/11/2760/honda-civic-2021-front-angle-low-view-575715.jpg"
   },
   %{
     make: "TOYOTA",
@@ -28,7 +29,8 @@ cars = [
     transmission: "Manual",
     fuel_type: "Gas",
     price: 850_000.50,
-    currency: "PHP"
+    currency: "PHP",
+    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/30/1943/toyota-vios-front-side-view-409037.jpg"
   },
   %{
     make: "TOYOTA",
@@ -42,7 +44,8 @@ cars = [
     transmission: "Automatic",
     fuel_type: "Diesel",
     price: 2_450_000.50,
-    currency: "PHP"
+    currency: "PHP",
+    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/30/1110/toyota-fortuner-front-angle-low-view-275442.jpg"
   },
   %{
     make: "TOYOTA",
@@ -56,7 +59,8 @@ cars = [
     transmission: "Automatic",
     fuel_type: "Gas",
     price: 2_370_000,
-    currency: "PHP"
+    currency: "PHP",
+    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/30/2014/toyota-camry-front-angle-low-view-860620.jpg"
   },
   %{
     make: "HONDA",
@@ -70,7 +74,8 @@ cars = [
     transmission: "Automatic",
     fuel_type: "Gas",
     price: 1_100_000,
-    currency: "PHP"
+    currency: "PHP",
+    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/11/2108/honda-accord-front-angle-low-view-235371.jpg"
   },
   %{
     make: "MAZDA",
@@ -84,7 +89,8 @@ cars = [
     transmission: "Automatic",
     fuel_type: "Gas",
     price: 1_350_000,
-    currency: "PHP"
+    currency: "PHP",
+    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/21/499/mazda-3-sedan-front-side-view-847321.jpg"
   },
   %{
     make: "MITSUBISHI",
@@ -98,7 +104,8 @@ cars = [
     transmission: "Automatic",
     fuel_type: "Diesel",
     price: 1_600_000,
-    currency: "PHP"
+    currency: "PHP",
+    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/24/1643/mitsubishi-montero-sport-front-angle-low-view-475965.jpg"
   },
   %{
     make: "MITSUBISHI",
@@ -112,35 +119,38 @@ cars = [
     transmission: "Automatic",
     fuel_type: "Gas",
     price: 1_200_000,
-    currency: "PHP"
+    currency: "PHP",
+    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/24/2953/mitsubishi-xpander-2022-front-side-view-243429.jpg"
   },
   %{
     make: "LAMBORGHINI",
-    model: "Gallardo",
-    series: "Gallardo SG2014",
-    year: "2014",
-    slug: "lamborghini-gallardo-2014",
+    model: "Huracan",
+    series: "Huracan SG2020",
+    year: "2020",
+    slug: "lamborghini-huracan-2020",
     seat_capacity: 5,
     color: "Yellow and Black",
     miles_per_gallon: 42,
     transmission: "Manual",
     fuel_type: "Gas",
-    price: 10_500_000,
-    currency: "PHP"
+    price: 15_500_000,
+    currency: "PHP",
+    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/51/478/lamborghini-huracan-front-angle-low-view-663613.jpg"
   },
   %{
     make: "LAMBORGHINI",
-    model: "Murcielago",
-    series: "Murcielago SG2016",
-    year: "2016",
-    slug: "lamborghini-murcielago-2016",
+    model: "Aventador",
+    series: "Aventador SG2020",
+    year: "2020",
+    slug: "lamborghini-aventador-2020",
     seat_capacity: 5,
     color: "Green and Black",
     miles_per_gallon: 46,
     transmission: "Manual",
     fuel_type: "Gas",
-    price: 15_500_000,
-    currency: "PHP"
+    price: 25_500_000,
+    currency: "PHP",
+    img_url: "https://imgcdn.zigwheels.ph/large/gallery/exterior/51/2018/lamborghini-aventador-front-angle-low-view-196746.jpg"
   }
 ]
 

@@ -5,9 +5,9 @@ defmodule AutoDealApi.Schemas.Car do
   use AutoDealApi.Schema
 
   @required ~w(make model transmission year)a
-  @optional ~w(slug seat_capacity color miles_per_gallon price currency fuel_type series)a
+  @optional ~w(slug seat_capacity color miles_per_gallon price currency fuel_type series img_url)a
 
-  @derive {Jason.Encoder, only: @required ++ @optional}
+  @derive {Jason.Encoder, only: [:id] ++ @required ++ @optional}
   schema "cars" do
     field :make, :string
     field :model, :string
@@ -21,6 +21,7 @@ defmodule AutoDealApi.Schemas.Car do
     field :fuel_type, :string
     field :price, :decimal
     field :currency, :string
+    field :img_url, :string
 
     timestamps()
   end
